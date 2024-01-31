@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinamismo</title>
+    <style>
+        header {
+            text-align: center;
+            background-color: aqua;
+            color: white;
+            padding: 20px 0;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: silver ;
+        }
+        .seccion {
+            background-color: white;
+            padding: 30px;
+            margin: 30px;
+            border: 1px solid silver;
+            width: 250px;
+            border-radius: 5px;
+            text-align: left;
+            display: inline-block;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer; 
+            
+        }
+        .seccion:hover {
+            transform: translateY(-15px);
+            background-color: beige;
+        }
+        .seccion:hover h2 {
+            color: red;
+        }
+        
+        div img {
+            width: 250px;
+            border-radius: 5px;
+        }
+        .autor {
+            color: black;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .seccion:hover .autor {
+            opacity: 5;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 5px;
+            padding: 50px;
+        }
+        @media (max-width:600px) {
+            .seccion {
+                width: 90%;
+                margin: 10px auto;
+            }
+            div img{
+               width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ultimas Noticias</h1>
+    </header>
+     <main>
+        <div class="seccion">
+            <img src="https://estaticos-cdn.prensaiberica.es/clip/cd28dc1b-972c-4d5b-b794-8e5e633eba93_alta-libre-aspect-ratio_default_0.jpg">
+            <h2>Noticia 1</h2>
+            <p>Descripcion de la noticia 1</p>
+            <p class="autor">Autor:Jhon Doe</p>
+        </div>
+        <div class="seccion">
+            <img src="https://estaticos-cdn.prensaiberica.es/clip/cd28dc1b-972c-4d5b-b794-8e5e633eba93_alta-libre-aspect-ratio_default_0.jpg">
+            <h2>Noticia 2</h2>
+            <p>Descripcion de la noticia 2</p>
+            <p class="autor">Autor:Jane Smith</p>
+        </div>
+        <div class="seccion"> 
+            <img src="https://estaticos-cdn.prensaiberica.es/clip/cd28dc1b-972c-4d5b-b794-8e5e633eba93_alta-libre-aspect-ratio_default_0.jpg">
+            <h2>Noticia 3</h2>
+            <p>Descripcion de la noticia 3</p>
+            <p class="autor">Autor:Michael Johnson</p>
+        </div>
+    </main>
+</body>
+</html>
